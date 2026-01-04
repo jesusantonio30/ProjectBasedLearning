@@ -36,15 +36,13 @@ int main() {
         // Write the buffer data to sink file
     while( source.read(buffer.data(), chunk_size) ) {
         sink.write(buffer.data(), chunk_size);
-        sink << '\n';
     }
 
     // Check if any data was left in buffer on last read from source file
     std::streamsize read_size = source.gcount();
 
-    if (read_size < 0) {
+    if (read_size > 0) {
         sink.write(buffer.data(), read_size);
-        sink << '\n';
     }
 
     return 0;
