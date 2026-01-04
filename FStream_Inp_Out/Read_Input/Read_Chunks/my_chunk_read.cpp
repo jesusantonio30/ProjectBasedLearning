@@ -11,11 +11,11 @@ int main() {
     std::filesystem::path source_path = "../example.txt";
 
     // Open/create sink file
-    std::ofstream sink(sink_path);
+    std::ofstream sink(sink_path, std::ios::binary);
 
     // check if any error occurred while open file
     if (!sink) {
-        std::cerr << "Error: Unable to open file '" << sink_path.filename() << std::endl;
+        std::cerr << "Error: Unable to open file '" << sink_path.filename() << "'.\n";
         return 1;
     }
 
@@ -24,7 +24,7 @@ int main() {
 
     // check if any error occurred while opening
     if (!source) {
-        std::cerr << "Error: Unable to open file '" << source_path.filename() << std::endl;
+        std::cerr << "Error: Unable to open file '" << source_path.filename() << "'.\n";
         return 1;
     }
 
