@@ -1,4 +1,3 @@
-
 # ProjectBasedLearning
 
 This repository serves as a personal space for hands-on learning through practical projects. The primary purpose is to deepen my understanding of computer science concepts by implementing them in code, rather than relying solely on theoretical study.
@@ -13,9 +12,9 @@ This repository serves as a personal space for hands-on learning through practic
 My current emphasis is on mastering essential fundamentals in **networks** and **systems programming**, with a strong foundation in **C++**.
 
 ### Ongoing Project
-- Exploring **input and output operations** using the **`fstream`** library in C++.
-- Implementing file handling techniques to read, write, and manage data streams effectively.
-- Building practical examples to understand stream states, error handling, and binary/file I/O.
+- Exploring **thread creation and management** to run multiple workers in parallel.
+- Implementing independent file processing without shared mutable state for safe concurrency.
+- Building practical skills in work distribution, thread joining, and result aggregation.
 
 ## Future Plans
 
