@@ -50,16 +50,19 @@ int main() {
     // Determine how many tasks to assign
     size_t numTasks = (files.size() + NUM_THREADS - 1) / NUM_THREADS;
 
+    size_t startFile = 0;
+
     // Iterate through vector of threads
     for (size_t thread = 0; thread < NUM_THREADS; ++thread) {
 
-        size_t startFile = thread * numTasks;
+        // Number of files to assign to each thread
         size_t endFile = std::min(startFile + numTasks, files.size());
 
-        // Assign files to each thread
-        for (size_t i = startFile; i < endFile; ++i) {
-            threadDuties[thread].push_back(files[i]);
-        }
+        threadDuties[thread].reserve(endFile - startFile);
+
+        threadDuties[thread].assign(files.begin() + startFile, files.begin() + endFile);
+
+        startFile = endFile;
     }
 
 
