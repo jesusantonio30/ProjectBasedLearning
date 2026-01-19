@@ -12,9 +12,9 @@ This repository serves as a personal space for hands-on learning through practic
 My current emphasis is on mastering essential fundamentals in **networks** and **systems programming**, with a strong foundation in **C++**.
 
 ### Ongoing Project
-- Exploring **thread creation and management** to run multiple workers in parallel.
-- Implementing independent file processing without shared mutable state for safe concurrency.
-- Building practical skills in work distribution, thread joining, and result aggregation.
+- Building a **TCP Echo Server** to understand fundamental socket programming concepts.
+- Implementing connection acceptance to handle incoming client requests.
+- Gaining hands-on experience with network programming basics and server-client interaction.
 
 ## Future Plans
 
